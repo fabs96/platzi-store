@@ -11,6 +11,13 @@ git:
 
 script:
   - yarn build
+# configuracion para mandar notificaciones
+notifications:
+  email:
+    recipients:
+      - fabrizzio1996@gmail.com
+    on_success: always
+    on_failure: always  
 deploy:
   provider: pages #github pages
   skip_cleanup: true
