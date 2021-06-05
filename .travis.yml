@@ -1,0 +1,26 @@
+#lenguaje con el cual vamos a trabajar
+languaje: node_js
+cache:
+  directories:
+    - node_modules
+    _ ~./npm
+node_js: # version a utilizar de node js
+  - '12' 
+git:
+  depth: 3
+
+script:
+  - yarn build
+deploy:
+  provider: pages #github pages
+  skip_cleanup: true
+  keep_history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/
+  target_branch: gh-pages #rama que va a publicar nuestro sitio segun documentacion
+  commit_message: "Deploy del proyecto"
+  on:
+    branch: master
+
+
+
