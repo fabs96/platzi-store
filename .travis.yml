@@ -3,7 +3,7 @@ languaje: node_js
 cache:
   directories:
     - node_modules
-    - ~./npm
+    - ~/.npm
 node_js: # version a utilizar de node js
   - '12' 
 git:
